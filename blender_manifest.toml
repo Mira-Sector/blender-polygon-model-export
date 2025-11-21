@@ -1,0 +1,29 @@
+schema_version = "1.0.0"
+
+id = "ss14_polygon_model_export"
+version = "1.0.0"
+name = "SS14 Polygon Model Export"
+tagline = "Export a into yml for Space Station 14's PolygonModel prototypes"
+maintainer = "Doctor-Cpu"
+type = "add-on"
+
+website = "https://github.com/Mira-Sector/space-station-14"
+
+tags = [
+	"Import-Export"
+]
+
+blender_version_min = "4.2.0"
+license = [
+	"SPDX:GPL-3.0-or-later",
+]
+
+[permissions]
+files = "Import/export YAML to disk"
+
+[build]
+paths_exclude_pattern = [
+	"__pycache__/",
+	"/.git/",
+	"/*.zip",
+]
