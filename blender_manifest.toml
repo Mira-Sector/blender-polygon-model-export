@@ -7,7 +7,7 @@ tagline = "Export a into yml for Space Station 14's PolygonModel prototypes"
 maintainer = "Doctor-Cpu"
 type = "add-on"
 
-website = "https://github.com/Mira-Sector/space-station-14"
+website = "https://github.com/Mira-Sector/blender-polygon-model-export"
 
 tags = [
 	"Import-Export"
@@ -28,6 +28,7 @@ files = "Import/export YAML to disk"
 [build]
 paths_exclude_pattern = [
 	"__pycache__/",
+	"venv/",
 	"/.git/",
-	"/*.zip",
+	"/*.zip"
 ]
