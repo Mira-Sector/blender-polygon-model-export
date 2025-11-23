@@ -34,10 +34,12 @@ def register_material_properties():
 
     for cls in get_polygon_types():
         for prop in cls.get_properties():
-            if not hasattr(bpy.types.Material, prop.name):
-                constructor = BLENDER_PROP_MAP.get(prop.type)
-                if constructor:
-                    setattr(bpy.types.Material, prop.name, constructor(prop))
+            if hasattr(bpy.types.Material, prop.name):
+                continue
+
+            constructor = BLENDER_PROP_MAP.get(prop.type)
+            if constructor:
+                setattr(bpy.types.Material, prop.name, constructor(prop))
 
 def unregister_material_properties():
     if hasattr(bpy.types.Material, "ss14_polygon_type"):

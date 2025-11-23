@@ -33,12 +33,14 @@ class SS14BasePolygon(ABC):
     @classmethod
     def draw_properties(cls, layout, mat):
         for prop in cls.get_properties():
-            if hasattr(mat, prop.name):
-                layout.prop(
-                    mat,
-                    prop.name,
-                    text=prop.label,
-                )
+            if not hasattr(mat, prop.name):
+                continue
+
+            layout.prop(
+                mat,
+                prop.name,
+                text=prop.label,
+            )
 
 class SS14ColoredPolygon(SS14BasePolygon):
     @classmethod
