@@ -13,9 +13,13 @@ tags = [
 	"Import-Export"
 ]
 
-blender_version_min = "4.2.0"
+blender_version_min = "4.5.0"
 license = [
 	"SPDX:GPL-3.0-or-later",
+]
+
+wheels = [
+	"./wheels/pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl"
 ]
 
 [permissions]
