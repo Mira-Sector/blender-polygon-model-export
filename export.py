@@ -55,9 +55,8 @@ class SS14ExportPolygonModel(Operator, ExportHelper):
             }
             for poly in mesh.polygons:
                 verts = [
-                    [
-                        float(c) for c in mesh.vertices[i].co
-                    ] for i in poly.vertices
+                    "{:.6f}, {:.6f}, {:.6f}".format(*mesh.vertices[i].co)
+                    for i in poly.vertices
                 ]
 
                 if len(verts) != 3:
